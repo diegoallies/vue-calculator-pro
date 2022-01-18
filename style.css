@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  #app {
+    top: 25%;
+    left: 40%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 400px;
+    width: 20vw;
+    border: 2px solid black;
+    background-color: gainsboro;
+  }
+  
+  .display {
+    border: 2px solid black;
+    background-color: #fff;
+    width: 100%;
+    height: 15%;
+    position: absolute;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    top: 0;
+  }
+  
+  .buttons {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    bottom: 6%;
+  }
+  
+  button {
+    font-size: 20px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+  }
+  
