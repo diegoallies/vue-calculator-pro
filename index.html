@@ -1,0 +1,129 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning Vue</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- <style>
+      .box {
+        padding: 100px 0;
+        width: 400px;
+        text-align: center;
+        background-color: aqua;
+        margin: 20px;
+        display: inline-block;
+      }
+    </style> -->
+  </head>
+  <body>
+    <!-- OUTPUTTING A VARIABLE IN VUE. -->
+
+    <!-- <div id="app">
+      <p>{{ title }}</p>
+    </div> -->
+
+    <!-- REACTING TO EVENTS IN VUE -->
+
+    <!-- <div id="app">
+      <p>{{ title }} - {{ author }} - {{ age }}</p>
+
+      <button v-on:click="age++">Increase Age</button>
+      <button v-on:click="age--">Decrease Age</button> -->
+    <!-- MEANS THE SAME AS THE ABOVE -->
+    <!-- <div @click="changeTitle('Rise')">Change book title</div>
+    </div> -->
+
+    <!-- CONDITIONAL RENDERING -->
+
+    <!-- <div id="app">
+      <div v-if="showbooks">
+        <p>{{ title }} - {{ author }} - {{ age }}</p>
+      </div>
+
+      <button @click="toggleShowBooks">
+        <span v-if="showbooks">Hide Books</span>
+        <span v-if="!showbooks">Show Books</span>
+        <span v-else>Show Books</span>
+      </button>
+
+      <div v-show="showbooks">Currently showing books</div>
+    </div> -->
+
+    <!-- OTHER MOUSE EVENTS -->
+    <!-- <div id="app">
+      <div v-if="showbooks">
+        <p>{{ title }} - {{ author }} - {{ age }}</p>
+      </div>
+
+      <button @click="toggleShowBooks">
+        <span v-if="showbooks">Hide Books</span>
+        <span v-if="!showbooks">Show Books</span>
+        <span v-else>Show Books</span>
+      </button>
+
+      <br />
+      MOUSE EVENTS
+      <div class="box" @mouseover="handleEvent($event, 5)">
+        mouseover (enter)
+      </div>
+      <div class="box" @mouseleave="handleEvent">mouseleave</div>
+      <div class="box" @dblclick="handleEvent">double click</div>
+      <div class="box" @mousemove="handleMouseMove">position - {{x}} {{}}</div>
+    </div> -->
+
+    <!-- OUTPUTTING LISTS -->
+    <!-- 
+    <div id="app">
+      <div v-if="showbooks">
+        <ul>
+          <li v-for="item in books">
+            <h3>{{item.title }}</h3>
+            <p>{{ item.author }}</p>
+          </li>
+        </ul>
+      </div>
+
+      <button @click="toggleShowBooks">
+        <span v-if="showbooks">Hide Books</span>
+        <span v-else>Show Books</span>
+      </button>
+    </div> -->
+
+    <!-- ATTRIBUTE BINDING   -->
+
+    <!-- <div id="app">
+      <a v-bind:href="url">incredible mastery</a>
+      <a :href="url">incredible mastery</a>
+      <div v-if="showbooks">
+        <ul>
+          <li v-for="item in books">
+            <img :src="item.img" :alt="item.title" />
+            <h3>{{item.title }}</h3>
+            <p>{{ item.author }}</p>
+          </li>
+        </ul>
+      </div>
+
+      <button @click="toggleShowBooks">
+        <span v-if="showbooks">Hide Books</span>
+        <span v-else>Show Books</span>
+      </button>
+    </div> -->
+
+    <div id="app">
+      <div class="display">
+        <span>{{ sum }}</span>
+      </div>
+      <div class="buttons">
+        <button v-for="operator of operators" @click="addToSum(operator)">
+          {{operator}}
+        </button>
+        <button @click="evalSum">=</button>
+        <button @click="clearSum">CLR</button>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
